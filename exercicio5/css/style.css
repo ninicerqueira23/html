@@ -35,7 +35,7 @@ padding: 50px;/*espaçamento de 50px nas margens*/
         background-size: cover;
     }
     #img-1 {
-        background-image: url(https://github.com/ninicerqueira23/html/exercicio5/Imagens/tenis1.jpg);
+        background-image: url(../imagens/tenis1.jpg);
     }
     #img-2 {
         background-image: url(../imagens/tenis2.jpg);
