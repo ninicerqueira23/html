@@ -1,0 +1,101 @@
+* {
+   box-sizing: border-box;
+}
+/*estilo do body*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.anotacao {
+    background-color: rgb(141, 37, 194);
+    padding: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.cabecalho {
+    padding: 60px;
+    text-align: center;
+    background-image: url(../imagens/Minhas\ leituras.png) ;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+/*estilo da barra navegação*/
+.barra_nav {
+    display: flex;
+    background-color: rgb(141, 37, 194);
+}
+
+/*estilo dos links da barra de navegação*/
+.barra_nav a {
+    color: rgb(255, 255, 255);
+    padding: 14px 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/*trocar a cor de fundo quando o cursor estiver sobre o link*/
+.barra_nav a:hover {
+    background-color: rgb(192, 80, 244);
+    color: rgb(255, 255, 255);
+}
+
+/*configuração da coluna*/
+.coluna {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+/*criar 2 colunas desiguais (30 e 70%*/
+.lateral {
+    flex: 30%;
+    background-color: rgb(227, 193, 248);
+    padding: 20px;
+}
+.principal {
+    flex: 70%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+/*imagem faslsa apenas para marcação do espaço*/
+.imagem_falsa {
+    background-color: rgb(221, 147, 255);
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+}
+.imagem_falsa2 {
+    background-color: rgb(192, 80, 244);
+    width: 100%;
+    padding: 20px;
+    height: 60px;
+    margin-bottom: 2px;
+}
+
+.imagem_falsa3 {
+    background-color: rgb(222, 152, 255);
+    width: 100%;
+    padding: 20px;
+    height: 200px;
+}
+
+.rodape {
+    max-height: fit-content;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(141, 37, 194);
+    color: aliceblue;
+}
+
+@media screen and (max-width: 500px){
+.coluna, .barra_nav {
+    flex-direction: column;
+}
+.cabecalho {
+    background-image: url(../imagens/My\ bo.png);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+}
