@@ -228,12 +228,74 @@
             bottom: 0;
             width: 100%;
         }
+
+        .noticias {
+        padding: 40px 20px;
+        background-color: #fff5e6;
+        margin-top: 20px;
+    }
+
+    .noticia-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .noticia-card {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: calc(33.33% - 20px);
+        cursor: pointer;
+        transition: transform 0.3s, max-height 0.5s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        max-height: 150px; /* Altura inicial */
+    }
+
+    .noticia-card:hover {
+        transform: scale(1.05);
+    }
+
+    .noticia-completa {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .noticia-card.expandido {
+        max-height: 500px; /* Altura ao expandir */
+    }
+
+    .noticia-card.expandido .preview {
+        display: none;
+    }
+
+    .noticia-card.expandido .noticia-completa {
+        display: block;
+        opacity: 1;
+    }
+
+    /* Responsividade para tablets e celulares */
+    @media (max-width: 768px) {
+        .noticia-card {
+            width: calc(50% - 20px);
+        }
+    }
+
+    @media (max-width: 480px) {
+        .noticia-card {
+            width: 100%;
+        }
+    }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="LOGOO.jpeg" alt="Logo" />
+            <a href="login.html" class="logo"> <img src="LOGOO.jpeg" alt="Logo"></a>
              </div>
         <nav>
             <ul>
@@ -244,7 +306,7 @@
                 <li><a href="eventos.html">Eventos</a></li>
             </ul>
         </nav>
-        <button class="profile-button">Perfil</button>
+        <button class="profile-button" onclick="location.href='perfil.html'">Perfil</button>
     </header>
 
     <div class="carrossel-container">
@@ -326,6 +388,40 @@
         </section>
     </main>
 
+    <section class="noticias">
+        <h2>Últimas Notícias</h2>
+        <div class="noticia-cards">
+            <div class="noticia-card" onclick="expandirNoticia(this)">
+                <h3>O superalimento da Dieta Moderna</h3>
+                <p class="preview">Estudos recentes destacam os benefícios dos ovos...</p>
+                <div class="noticia-completa">
+                    <p>Estudos recentes destacam os benefícios dos ovos como um superalimento. Além de serem uma excelente fonte de proteínas de alta qualidade, eles contêm vitaminas e minerais essenciais, como a vitamina D e o selênio. Pesquisadores afirmam que incluir ovos na dieta pode melhorar a saúde ocular e ajudar na manutenção da massa muscular.</p>
+                </div>
+            </div>
+            <div class="noticia-card" onclick="expandirNoticia(this)">
+                <h3>Novos Métodos de Produção de Ovos Aumentam a Sustentabilidade</h3>
+                <p class="preview">A indústria de produção de ovos está adotando novas ...</p>
+                <div class="noticia-completa">
+                    <p>A indústria de produção de ovos está adotando novas tecnologias para reduzir o impacto ambiental. Técnicas avançadas de manejo de aves e métodos sustentáveis de cultivo estão tornando a produção de ovos mais ecológica. Este avanço não só diminui a pegada de carbono, mas também melhora as condições de vida das galinhas.</p>
+                </div>
+            </div>
+            <div class="noticia-card" onclick="expandirNoticia(this)">
+                <h3>Receitas Inovadoras: Como Usar Ovos em Pratos Gourmet</h3>
+                <p class="preview">Chefs renomados estão explorando novas maneiras de incorporar...</p>
+                <div class="noticia-completa">
+                    <p>Chefs renomados estão explorando novas maneiras de incorporar ovos em receitas gourmet. De molhos sofisticados a sobremesas inovadoras, o ovo está ganhando destaque nas cozinhas mais criativas. Aprenda a preparar pratos como "Ovo Pochê com Trufas" e "Creme Brûlée de Ovos" com estas receitas exclusivas.</p>
+                </div>
+            </div>
+            <div class="noticia-card" onclick="expandirNoticia(this)">
+                <h3>Aumento de Preços de Ovos: O Que Esperar para os Próximos Meses</h3>
+                <p class="preview">Recentemente, houve um aumento significativo no preço dos ovos devido...</p>
+                <div class="noticia-completa">
+                    <p>Recentemente, houve um aumento significativo no preço dos ovos devido a vários fatores, incluindo mudanças climáticas e custos de alimentação. Especialistas econômicos discutem as possíveis causas e oferecem previsões sobre como os preços podem se comportar nos próximos meses. Entenda o impacto dessa situação para os consumidores e para a indústria.</p>
+                </div>
+        </div>
+        
+    </section>
+
     <footer id="footer">
         <p>Rua Patrocínio Monteiro Nº 485 - Centro - Bastos - SP<br>
         Fone: (14) 3478-3862 ou (14) 9704-1459 - CEP: 17690-000<br>
@@ -333,6 +429,10 @@
     </footer>
 
     <script>
+
+function expandirNoticia(card) {
+        card.classList.toggle('expandido');
+    }
         let slideIndex = 0;
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');

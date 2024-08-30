@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assine Agora - Planos de Assinatura</title>
+    <link rel="icon" href="LOGOO.jpeg" type="image/png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('fundo.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center; /* Centraliza o conteúdo */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo img {
+            width: 200px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-left: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .plans-container {
+            padding-top: 200px;
+            display: flex;
+            flex-wrap: wrap; /* Permite que os cards quebrem a linha */
+            justify-content: center; /* Centraliza os cards horizontalmente */
+            gap: 30px;
+        }
+
+        .plan-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 30px;
+            width: 350px; /* Define uma largura fixa para os cards */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centraliza o conteúdo dos cards */
+        }
+
+        .plan-card h2 {
+            font-size: 28px;
+            color: #ffc107;
+            margin-bottom: 20px;
+        }
+
+        .plan-card p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .plan-card ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .plan-card ul li {
+            margin-bottom: 10px;
+        }
+
+        .btn-assine {
+            background-color: #fcb900;
+            color: #000;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="login.html" class="logo"><img src="logo.png" alt="Logo"></a>
+           
+        </div>
+    </header>
+
+    <section class="plans-container">
+        <!-- Plano Básico -->
+        <div class="plan-card">
+            <h2>Plano Básico</h2>
+            <p>Receba ovos frescos semanalmente a um preço acessível.</p>
+            <ul>
+                <li>Entrega semanal de 6 dúzias de ovos.</li>
+                <li>Ovos brancos de alta qualidade.</li>
+                <li>Descontos em eventos e workshops sobre culinária.</li>
+            </ul>
+            <p>Aproveite a praticidade e economia para sua casa ou negócio.</p>
+            <button class="btn-assine">Assinar Agora - R$ 19,99/mês</button>
+        </div>
+
+        <!-- Plano Premium -->
+        <div class="plan-card">
+            <h2>Plano Premium</h2>
+            <p>O melhor para sua saúde e bem-estar com ovos orgânicos.</p>
+            <ul>
+                <li>Entrega semanal de 12 dúzias de ovos orgânicos e caipiras.</li>
+                <li>Ovos de alta qualidade selecionados.</li>
+                <li>Acesso a eventos VIP e experiências culinárias exclusivas.</li>
+                <li>Frete grátis em todas as entregas.</li>
+            </ul>
+            <p>Experimente o melhor para sua saúde e bem-estar.</p>
+            <button class="btn-assine">Assinar Agora - R$ 39,99/mês</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Ovo Online. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
